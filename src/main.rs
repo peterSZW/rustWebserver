@@ -1,3 +1,8 @@
+mod faildemo;
+use faildemo::*;
+
+#[macro_use]
+extern crate fail;
 extern crate futures;
 extern crate hyper;
 
@@ -69,6 +74,7 @@ fn echo(req: Request<Body>) -> BoxFut {
 }
 
 fn main() {
+    fail_main();
     let addr = ([127, 0, 0, 1], 3000).into();
 
     let server = Server::bind(&addr)

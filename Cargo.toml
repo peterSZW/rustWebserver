@@ -6,3 +6,7 @@ authors = ["peter"]
 [dependencies]
 hyper = "0.12"
 futures = "0.1.21"
+fail = "0.2"
+
+[dependencies.mysql]
+version = "*"
